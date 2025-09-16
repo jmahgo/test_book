@@ -28,13 +28,13 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt
       - name: Build Jupyter Book (treat warnings as errors)
-        working-directory: YOUR_BOOK_DIRECTORY
+        working-directory: test_book
         run: |
           jupyter-book build -W --keep-going .
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: YOUR_BOOK_DIRECTORY/_build/html
+          path: test_book/_build/html
 
   deploy:
     if: github.ref == 'refs/heads/main'
