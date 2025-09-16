@@ -95,4 +95,8 @@ print("slope:", best_fit.coef_[0])
 print("intercept:", best_fit.intercept_)
 ```
 
+```{code-cell}
+print(12 + 12)
+print(3 + 3)
+```
 
